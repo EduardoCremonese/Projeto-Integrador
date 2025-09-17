@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYX | Minha Conta</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="header-inner-content">
+      <h1 class="logo"><a href="index.html">NYX<span>POUCHES</span></a></h1>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contatos.html">Contatos</a></li>
+          <li><a href="conta.html">Conta</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icon-container">
+        <img src="images/images/cart.png" alt="Carrinho" />
+        <img src="images/images/menu.png" class="menu-button" alt="Abrir menu" />
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="page-inner-content" style="padding:1rem 1rem;">
+      <h2 class="section-title">Entrar na sua conta</h2>
+      <div class="subtitle-underline"></div>
+
+      <form style="margin-top:1rem; max-width:420px;" action="#" method="post">
+        <label for="email">Email</label><br>
+        <input id="email" name="email" type="email" required style="width:100%; padding:0.6rem; margin:0.5rem 0;" />
+
+        <label for="senha">Senha</label><br>
+        <input id="senha" name="senha" type="password" required style="width:100%; padding:0.6rem; margin:0.5rem 0;" />
+
+        <button class="cta-button" type="submit">Entrar</button>
+        <p style="margin-top:0.8rem;">Ainda não tem conta? <a href="#">Crie uma</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="gray-background">
+    <div class="page-inner-content footer-content">
+      <p style="padding:1rem 0; color:#fff;">NYX POUCHES — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.querySelector(".navbar");
+    const menuButton = document.querySelector(".menu-button");
+    if (menuButton) {
+      menuButton.addEventListener('click', () => {
+        navbar.classList.toggle("show-menu");
+      });
+    }
+    const navLinks = document.querySelectorAll('nav a');
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(a => {
+      const hrefFile = a.getAttribute('href').split('/').pop();
+      if (hrefFile === currentFile) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  </script>
+</body>
+</html>

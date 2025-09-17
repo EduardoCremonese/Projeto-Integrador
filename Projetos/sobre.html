@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYX | Sobre</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="header-inner-content">
+      <h1 class="logo"><a href="index.html">NYX<span>POUCHES</span></a></h1>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contatos.html">Contatos</a></li>
+          <li><a href="conta.html">Conta</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icon-container">
+        <img src="images/images/cart.png" alt="Carrinho" />
+        <img src="images/images/menu.png" class="menu-button" alt="Abrir menu" />
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="sobre" style="padding:1rem 1rem; max-width:900px; margin:auto; line-height:1.7;">
+      <h2 class="section-title">Sobre a NYX Pouches</h2>
+      <div class="subtitle-underline"></div>
+
+      <p style="margin-top:1rem;">
+        A <strong>NYX Pouches</strong> nasceu com um propósito muito claro: ajudar pessoas a darem um passo decisivo na luta contra o vício em tabaco e produtos derivados. 
+        Nossa história começou quando percebemos de perto os impactos devastadores do cigarro tradicional, do tabaco em combustão e, mais recentemente, do cigarro eletrônico (vape) na vida de milhões de pessoas.
+      </p>
+
+      <h3 style="margin-top:2rem;">Por que criamos os sachês de nicotina?</h3>
+      <p>
+        Ao longo das últimas décadas, ficou evidente que os malefícios do tabaco vão muito além da dependência: doenças respiratórias, problemas cardiovasculares, envelhecimento precoce e milhares de mortes todos os anos. 
+        Mesmo com o avanço de tecnologias como o cigarro eletrônico, percebemos que a solução não estava em trocar um malefício por outro, mas sim em oferecer <strong>um caminho real para reduzir danos</strong>.
+      </p>
+
+      <p>
+        Foi assim que criamos os <strong>NYX Nicotine Pouches</strong>: sachês discretos, práticos, sem combustão, sem fumaça e sem cheiro, capazes de entregar nicotina de forma mais limpa e controlada, auxiliando no processo de abandono do cigarro.
+      </p>
+
+      <h3 style="margin-top:2rem;">Os malefícios do cigarro e derivados</h3>
+      <ul style="margin-left:1.2rem; margin-top:0.5rem;">
+        <li>O cigarro tradicional libera mais de 7.000 substâncias tóxicas durante a queima.</li>
+        <li>O tabaco em combustão é uma das principais causas de câncer de pulmão e doenças cardíacas.</li>
+        <li>O cigarro eletrônico, apesar de parecer inofensivo, ainda carrega riscos devido a químicos inalados.</li>
+        <li>A fumaça passiva prejudica não apenas quem fuma, mas todos ao redor.</li>
+      </ul>
+
+      <h3 style="margin-top:2rem;">Os benefícios dos sachês NYX</h3>
+      <ul style="margin-left:1.2rem; margin-top:0.5rem;">
+        <li><strong>Discrição</strong>: não produzem fumaça, cheiro ou vapor.</li>
+        <li><strong>Praticidade</strong>: podem ser usados em qualquer lugar, sem incomodar outras pessoas.</li>
+        <li><strong>Redução de danos</strong>: alternativa mais limpa ao cigarro e ao vape.</li>
+        <li><strong>Apoio no processo de parar de fumar</strong>: ajudam a controlar a abstinência da nicotina sem recorrer ao cigarro.</li>
+        <li><strong>Variedade de sabores</strong>: agradam diferentes perfis e tornam a experiência mais agradável.</li>
+      </ul>
+
+      <h3 style="margin-top:2rem;">Nossa missão</h3>
+      <p>
+        A missão da <strong>NYX Pouches</strong> é oferecer <strong>liberdade e saúde</strong> a cada pessoa que decide mudar de vida, 
+        substituindo hábitos nocivos por escolhas conscientes. Trabalhamos para ser uma ponte entre a dependência e a autonomia, 
+        entre a doença e o bem-estar, oferecendo uma solução moderna, acessível e eficaz.
+      </p>
+
+      <h3 style="margin-top:2rem;">Aviso importante</h3>
+      <p style="font-size:0.9rem; color:#444;">
+        Nossos produtos são destinados apenas a adultos maiores de 18 anos. O uso de nicotina causa dependência química. 
+        Embora os sachês de nicotina representem uma alternativa mais segura em comparação ao cigarro e ao tabaco, 
+        não são isentos de riscos. Recomendamos sempre buscar orientação médica no processo de cessação do tabagismo.
+      </p>
+
+      <hr style="margin:2rem 0;">
+
+      <p style="text-align:center; font-size:0.85rem; color:#666;">
+        &copy; 2025 NYX Pouches. Todos os direitos reservados.  
+        Este site e seu conteúdo não podem ser reproduzidos ou distribuídos sem autorização expressa.  
+        NYX Pouches é uma marca registrada e todos os direitos sobre textos, imagens e design estão protegidos pela legislação vigente.
+      </p>
+    </section>
+  </main>
+
+  <footer class="gray-background">
+    <div class="page-inner-content footer-content">
+      <p style="padding:1rem 0; color:#fff;">NYX POUCHES — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.querySelector(".navbar");
+    const menuButton = document.querySelector(".menu-button");
+    if (menuButton) {
+      menuButton.addEventListener('click', () => {
+        navbar.classList.toggle("show-menu");
+      });
+    }
+    const navLinks = document.querySelectorAll('nav a');
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(a => {
+      const hrefFile = a.getAttribute('href').split('/').pop();
+      if (hrefFile === currentFile) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  </script>
+</body>
+</html>

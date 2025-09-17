@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYX | Produtos</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="header-inner-content">
+      <h1 class="logo"><a href="index.html">NYX<span>POUCHES</span></a></h1>
+      <nav aria-label="Menu principal">
+        <ul role="menubar">
+          <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+          <li role="none"><a href="produtos.html" role="menuitem">Produtos</a></li>
+          <li role="none"><a href="sobre.html" role="menuitem">Sobre</a></li>
+          <li role="none"><a href="contatos.html" role="menuitem">Contatos</a></li>
+          <li role="none"><a href="conta.html" role="menuitem">Conta</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icon-container">
+        <div style="position:relative;">
+          <img src="images/images/cart.png" alt="Carrinho" id="cart-icon" />
+          <span class="cart-count">0</span>
+        </div>
+        <img src="images/images/menu.png" class="menu-button" alt="Abrir menu" />
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="products-page"></div>
+    <div class="page-inner-content" style="padding:1rem 1rem;">
+      
+      <h2 class="section-title">Todos os Produtos</h2>
+      <div class="subtitle-underline"></div>
+
+      <div class="cols cols-4" style="padding-top: 1rem;"> <!-- Reduced padding -->
+        <!-- repetir cards conforme necessário -->
+        <div class="product">
+          <img src="images/images/products/nic mango 2.png" alt="NYX Mango" />
+          <p class="product-name">NYX MANGO 9MG</p>
+          <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="product-price"><span>R$</span>30,00</p>
+          <a class="cta-button" href="#">Adicionar ao carrinho</a>
+        </div>
+
+        <div class="product">
+          <img src="images/images/products/nic energy.png" alt="NYX Energy" />
+          <p class="product-name">NYX ENERGY 9MG</p>
+          <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="product-price"><span>R$</span>30,00</p>
+          <a class="cta-button" href="#">Adicionar ao carrinho</a>
+        </div>
+
+        <div class="product">
+          <img src="images/images/products/nic menthol.png" alt="NYX Menthol" />
+          <p class="product-name">NYX MENTHOL 9MG</p>
+          <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="product-price"><span>R$</span>30,00</p>
+          <a class="cta-button" href="#">Adicionar ao carrinho</a>
+        </div>
+
+        <div class="product">
+          <img src="images/images/products/nic melancia.png" alt="NYX Watermelon" />
+          <p class="product-name">NYX WATERMELON 9MG</p>
+          <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="product-price"><span>R$</span>30,00</p>
+          <a class="cta-button" href="#">Adicionar ao carrinho</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="gray-background">
+    <div class="page-inner-content footer-content">
+      <p style="padding:1rem 0; color:#fff;">NYX POUCHES — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle menu (mobile)
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+        
+        if (menuButton) {
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+        }
+
+        // Mark active link
+        const navLinks = document.querySelectorAll('nav a');
+        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+        
+        navLinks.forEach(a => {
+            const hrefFile = a.getAttribute('href').split('/').pop();
+            if (hrefFile === currentFile) {
+                a.classList.add('active');
+                a.setAttribute('aria-current', 'page');
+            }
+        });
+
+        // Shopping cart functionality with localStorage
+        let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+        const cartCountElement = document.querySelector('.cart-count');
+        
+        // Initialize cart count display
+        if (cartCountElement) {
+            cartCountElement.textContent = cartCount;
+            cartCountElement.style.display = cartCount > 0 ? 'flex' : 'none';
+        }
+
+        // Get all "Add to cart" buttons
+        const cartButtons = document.querySelectorAll('.cta-button');
+        
+        cartButtons.forEach(button => {
+            // Check if button text contains "carrinho" (Add to cart)
+            if (button.textContent.includes('carrinho') || button.textContent.includes('Carrinho')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    cartCount++;
+                    
+                    // Save to localStorage
+                    localStorage.setItem('cartCount', cartCount);
+                    
+                    if (cartCountElement) {
+                        cartCountElement.textContent = cartCount;
+                        cartCountElement.style.display = 'flex';
+                    }
+                    
+                    // Visual feedback
+                    const originalText = button.textContent;
+                    button.textContent = '✓ Adicionado!';
+                    button.style.backgroundColor = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 1500);
+                    
+                    console.log('Produto adicionado ao carrinho! Total:', cartCount);
+                });
+            }
+        });
+    });
+  </script>
+</body>
+</html>

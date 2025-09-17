@@ -1,151 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> NYX | Ecommerce</title>
-        <link rel="stylesheet" href="styles/globals.css" />
-    </head>
-    <body>
-        <div class= "navbar">
-            <div class="header-inner-content">
-                <h1 class="logo">NYX<span>POUCHES</span></h1>
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>Produtos</li>
-                        <li>Sobre</li>
-                        <li>Contatos</li>
-                        <li>Conta</li>
-                    </ul>
-                </nav>
-                <div class="nav-icon-container">
-                    <img src="images/images/cart.png" />
-                    <img src="images/images/menu.png" class="menu-button" />
-                </div>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYX | Ecommerce — Home</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="header-inner-content">
+      <h1 class="logo"><a href="index.html">NYX<span>POUCHES</span></a></h1>
+
+      <nav aria-label="Menu principal">
+        <ul role="menubar">
+          <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+          <li role="none"><a href="produtos.html" role="menuitem">Produtos</a></li>
+          <li role="none"><a href="sobre.html" role="menuitem">Sobre</a></li>
+          <li role="none"><a href="contatos.html" role="menuitem">Contatos</a></li>
+          <li role="none"><a href="conta.html" role="menuitem">Conta</a></li>
+        </ul>
+      </nav>
+            <div class="nav-icon-container">
+                <div style="position:relative;">
+                <img src="images/images/cart.png" alt="Carrinho" id="cart-icon" />
+                <span class="cart-count">0</span>
             </div>
+            <img src="images/images/menu.png" class="menu-button" alt="Abrir menu" />
+            </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-inner-content">
+      <div class="header-bottom-side">
+        <div class="header-bottom-side-left">
+          <h2>Uma nova forma de consumir nicotina: prático, discreto e sem fumaça.</h2>
+          <p>
+            Os sachês de nicotina NYX foram criados para ajudar você a abandonar o cigarro, o tabaco e o vape. Mais saúde, liberdade e satisfação em qualquer lugar.
+          </p>
+          <a class="cta-button" href="produtos.html">Ver Agora &#8594;</a>
         </div>
-        <header>
-            <div class="header-inner-content">
-                <div class="header-bottom-side">
-                    <div class="header-bottom-side-left">
-                    <h2>Uma nova forma de consumir nicotina: prático, discreto e sem fumaça.</h2>
-                    <p>
-                        Os sachês de nicotina NYX foram criados para ajudar você a abandonar o cigarro, o tabaco e o vape. Mais saúde, liberdade e satisfação em qualquer lugar.
-                    </p>
-                    <button>Ver Agora &#8594;</button>
-                </div>
-                <div class="header-bottom-side-right">
-                    <img src="images/images/imagem principal.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </header>
+        <div class="header-bottom-side-right">
+          <img src="images/images/imagem principal.png" alt="Produto principal" />
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <!--Conteudo Main-->
-        <main>
-            <div class="gray-background">
-                <div class="page-inner-content">
-                    <div class="cols cols-3">
-                        <img src="images/images/products/NIC MENTHOL 02.jpg">
-                        <img src="images/images/products/NIC COFFEE 02.jpg">
-                        <img src="images/images/products/NIC WATERMELON 02.jpg">
-                    </div>
-                </div>
-            </div>
+  <main>
+    <div class="gray-background">
+      <div class="page-inner-content">
+        <div class="cols cols-3">
+          <img src="images/images/products/NIC MENTHOL 02.jpg" alt="Menthol" />
+          <img src="images/images/products/NIC COFFEE 02.jpg" alt="Coffee" />
+          <img src="images/images/products/NIC WATERMELON 02.jpg" alt="Watermelon" />
+        </div>
+      </div>
+    </div>
 
-            <div>
-                <div class="page-inner-content">
-                        <h3 class="section-title">Principais Produtos</h3>
-                        <div class="subtitle-underline"></div>
-                        <div class="cols cols-4">
-                            <div class="product">
-                            <img src="images/images/products/nic mango 2.png" alt="">
-                            <p class="product-name">NYX MANGO 9MG</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p class="product-price"><span>R$</span>30,00</p>
-                            </div>
-                            <div class="product">
-                            <img src="images/images/products/nic energy.png" alt="">
-                            <p class="product-name">NYX ENERGY 9MG</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p class="product-price"><span>R$</span>30,00</p>
-                            </div>
-                            <div class="product">
-                            <img src="images/images/products/nic menthol.png" alt="">
-                            <p class="product-name">NYX MENTHOL 9MG</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p class="product-price"><span>R$</span>30,00</p>
-                            </div>
-                            <div class="product">
-                            <img src="images/images/products/nic melancia.png" alt="">
-                            <p class="product-name">NYX WATERMELON 9MG</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p class="product-price"><span>R$</span>30,00</p>
-                            </div>
-                        </div>
-                </div>
-            </div>
+    <div>
+      <div class="page-inner-content">
+        <h3 class="section-title">Principais Produtos</h3>
+        <div class="subtitle-underline"></div>
+        <div class="cols cols-4">
+          <div class="product">
+            <img src="images/images/products/nic mango 2.png" alt="NYX Mango" />
+            <p class="product-name">NYX MANGO 9MG</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="product-price"><span>R$</span>30,00</p>
+          </div>
+          <div class="product">
+            <img src="images/images/products/nic energy.png" alt="NYX Energy" />
+            <p class="product-name">NYX ENERGY 9MG</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="product-price"><span>R$</span>30,00</p>
+          </div>
+          <div class="product">
+            <img src="images/images/products/nic menthol.png" alt="NYX Menthol" />
+            <p class="product-name">NYX MENTHOL 9MG</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="product-price"><span>R$</span>30,00</p>
+          </div>
+          <div class="product">
+            <img src="images/images/products/nic melancia.png" alt="NYX Watermelon" />
+            <p class="product-name">NYX WATERMELON 9MG</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="product-price"><span>R$</span>30,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="gray-background"> 
-                <div class="header-inner-content">
-                    <div class="header-bottom-side exclusive-container">
-                        <div class="header-bottom-side-left">
-                        <h2>NYX NIC POUCHES</h2>
-                        <p>
-                        Imagine sentir a explosão refrescante e doce da manga enquanto cuida da sua saúde e dá um passo a mais rumo à liberdade do cigarro. Os NYX Nic Pouches sabor Mango foram criados para quem busca praticidade, sabor marcante e uma alternativa real ao tabaco e ao vape.
-                        </p>
-                        <button>Ver Agora &#8594;</button>
-                        </div>
-                        <div class="header-bottom-side-right">
-                        <img src="images/images/products/imagem mango 03.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="gray-background">
+      <div class="header-inner-content">
+        <div class="header-bottom-side exclusive-container">
+          <div class="header-bottom-side-left">
+            <h2>NYX NIC POUCHES</h2>
+            <p>
+              Imagine sentir a explosão refrescante e doce da manga enquanto cuida da sua saúde e dá um passo a mais rumo à liberdade do cigarro.
+            </p>
+            <a class="cta-button" href="produtos.html">Ver Agora &#8594;</a>
+          </div>
+          <div class="header-bottom-side-right">
+            <img src="images/images/products/imagem mango 03.png" alt="Mango" />
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div>
-                <div class="page-inner-content">
-                    <div class="testimonials">
-                        <div class="testimonial">
-                            <p>"</p>
-                            <p>Consegui parar de fumar depois de 10 anos! O sachê sabor manga é delicioso e me ajudou muito no processo.</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p>Maria Antonela</p>
-                        </div>
-                        <div class="testimonial">
-                            <p>"</p>
-                            <p>Uso no trabalho e ninguém percebe, super discreto. O sabor é ótimo e dura bastante tempo.</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p>Carlos Francisco</p>
-                        </div>
-                        <div class="testimonial">
-                            <p>"</p>
-                            <p>Finalmente encontrei algo que substitui o cigarro sem me deixar ansiosa. Recomendo demais!</p>
-                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                            <p>Fernanda K.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div>
+      <div class="page-inner-content">
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>"</p>
+            <p>Consegui parar de fumar depois de 10 anos! O sachê sabor manga é delicioso e me ajudou muito no processo.</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p>Maria Antonela</p>
+          </div>
+          <div class="testimonial">
+            <p>"</p>
+            <p>Uso no trabalho e ninguém percebe, super discreto. O sabor é ótimo e dura bastante tempo.</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p>Carlos Francisco</p>
+          </div>
+          <div class="testimonial">
+            <p>"</p>
+            <p>Finalmente encontrei algo que substitui o cigarro sem me deixar ansiosa. Recomendo demais!</p>
+            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p>Fernanda K.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
+  <footer class="gray-background">
+    <div class="page-inner-content footer-content">
+        <p style="padding:1rem 0; color:#fff;">&copy; 2025 NYX Pouches — Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-        </main>
-
-        <footer class="gray-background">
-            <div class="page-inner-content footer-content">
-                
-            </div>
-        </footer>
-
-        <script>
-            const navbar = document.querySelector(".navbar");
-            const menuButton = document.querySelector (".menu-button");
-
+  <script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle menu (mobile)
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+        
+        if (menuButton) {
             menuButton.addEventListener('click', () => {
                 navbar.classList.toggle("show-menu");
             });
-        </script>
-    </body>
+        }
+
+        // Mark active link
+        const navLinks = document.querySelectorAll('nav a');
+        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+        
+        navLinks.forEach(a => {
+            const hrefFile = a.getAttribute('href').split('/').pop();
+            if (hrefFile === currentFile) {
+                a.classList.add('active');
+                a.setAttribute('aria-current', 'page');
+            }
+        });
+
+        // Shopping cart functionality with localStorage
+        let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+        const cartCountElement = document.querySelector('.cart-count');
+        
+        // Initialize cart count display
+        if (cartCountElement) {
+            cartCountElement.textContent = cartCount;
+            cartCountElement.style.display = cartCount > 0 ? 'flex' : 'none';
+        }
+
+        // Get all "Add to cart" buttons
+        const cartButtons = document.querySelectorAll('.cta-button');
+        
+        cartButtons.forEach(button => {
+            // Check if button text contains "carrinho" (Add to cart)
+            if (button.textContent.includes('carrinho') || button.textContent.includes('Carrinho')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    cartCount++;
+                    
+                    // Save to localStorage
+                    localStorage.setItem('cartCount', cartCount);
+                    
+                    if (cartCountElement) {
+                        cartCountElement.textContent = cartCount;
+                        cartCountElement.style.display = 'flex';
+                    }
+                    
+                    // Visual feedback
+                    const originalText = button.textContent;
+                    button.textContent = '✓ Adicionado!';
+                    button.style.backgroundColor = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '';
+                    }, 1500);
+                    
+                    console.log('Produto adicionado ao carrinho! Total:', cartCount);
+                });
+            }
+        });
+    });
+</script>
+</body>
 </html>
