@@ -1,0 +1,36 @@
+<h2 class="section-title">{{ id() ? 'Editar' : 'Novo' }} Pedido</h2>
+<div class="subtitle-underline"></div>
+
+<form [formGroup]="form" (ngSubmit)="salvar()">
+  <div class="form-row">
+    <label>Usuário (ID)</label>
+    <input type="number" formControlName="usuarioId">
+    <!-- Se quiser, troque por um modal de lookup de usuário também -->
+  </div>
+
+  <div class="form-row">
+    <label>Endereço (ID)</label>
+    <input type="number" formControlName="enderecoId">
+    <!-- Ou modal de lookup de endereço -->
+  </div>
+
+  <h3>Itens</h3>
+  <div formArrayName="itens">
+    <div class="item-row" *ngFor="let it of itens.controls; index as i" [formGroupName]="i">
+      <label>Produto ID</label>
+      <input type="number" formControlName="produtoId">
+      <button type="button" (click)="escolherProduto(i)">Procurar...</button>
+
+      <label>Qtd.</label>
+      <input type="number" formControlName="quantidade" min="1">
+
+      <button type="button" (click)="removerItem(i)">Remover</button>
+    </div>
+  </div>
+  <button type="button" (click)="adicionarItem()">Adicionar item</button>
+
+  <div class="form-actions">
+    <button mat-flat-button color="primary" type="submit">Salvar</button>
+    <button mat-button type="button" (click)="cancelar()">Cancelar</button>
+  </div>
+</form>

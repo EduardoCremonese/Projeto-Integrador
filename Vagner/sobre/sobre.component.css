@@ -1,0 +1,47 @@
+/* seção principal do sobre */
+#sobre {
+  padding: 1rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* título */
+#sobre h2.section-title {
+  margin-bottom: 0.5rem;
+}
+
+/* parágrafos */
+#sobre p {
+  margin-top: 1rem;
+}
+
+/* subtítulos (Por que criamos, Benefícios, etc.) */
+#sobre h3 {
+  margin-top: 2rem;
+}
+
+/* listas */
+#sobre ul {
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* aviso importante */
+#sobre p.aviso {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* nota final */
+#sobre p.footer-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+/* linha divisória */
+#sobre hr {
+  margin: 2rem 0;
+}
