@@ -1,0 +1,12 @@
+<nav class="navbar dark">
+  <div class="brand">Nyx</div>
+  <ul class="menu">
+    <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/produtos" routerLinkActive="active">Produtos</a></li>
+    <li><a routerLink="/usuarios" routerLinkActive="active">Usuários</a></li>
+    <li><a routerLink="/enderecos" routerLinkActive="active">Endereços</a></li>
+    <li><a routerLink="/pedidos" routerLinkActive="active">Pedidos</a></li>
+    <li><a routerLink="/listas-desejos" routerLinkActive="active">Lista de Desejos</a></li>
+    <li class="right"><a (click)="logout()">Sair</a></li>
+  </ul>
+</nav>

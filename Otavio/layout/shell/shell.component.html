@@ -1,0 +1,31 @@
+<div class="navbar">
+  <div class="header-inner-content">
+    <!-- Logo -->
+    <h1 class="logo">
+      <a routerLink="/home">NYX<span>POUCHES</span></a>
+    </h1>
+
+    <!-- Menu de navegação -->
+    <nav aria-label="Menu principal">
+  <ul role="menubar">
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/produtos">Produtos</a></li>
+    <li><a routerLink="/sobre">Sobre</a></li>
+    <li><a routerLink="/contatos">Contatos</a></li>
+    <li><a routerLink="/conta">Conta</a></li>
+  </ul>
+</nav>
+
+    <!-- Ícones à direita (carrinho e menu mobile) -->
+    <div class="nav-icon-container">
+      <div style="position: relative;">
+        <img src="assets/images/cart.png" alt="Carrinho" id="cart-icon" />
+        <span class="cart-count">0</span>
+      </div>
+      <img src="assets/images/menu.png" class="menu-button" alt="Abrir menu" />
+    </div>
+  </div>
+</div>
+
+<!-- Aqui entra o conteúdo das rotas filhas -->
+<router-outlet></router-outlet>

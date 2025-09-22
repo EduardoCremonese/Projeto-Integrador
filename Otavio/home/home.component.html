@@ -1,0 +1,122 @@
+<header> 
+  <div class="header-inner-content">
+    <div class="header-bottom-side">
+      <div class="header-bottom-side-left">
+        <h2>Uma nova forma de consumir nicotina: prático, discreto e sem fumaça.</h2>
+        <p>
+          Os sachês de nicotina NYX foram criados para ajudar você a abandonar o cigarro,
+          o tabaco e o vape. Mais saúde, liberdade e satisfação em qualquer lugar.
+        </p>
+        <a class="cta-button" routerLink="/produtos">Ver Agora &#8594;</a>
+      </div>
+      <div class="header-bottom-side-right">
+        <!-- Imagem principal -->
+        <img src="assets/images/principal.png" alt="Produto principal">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Seção com 3 imagens principais -->
+  <div class="gray-background">
+    <div class="page-inner-content">
+      <div class="cols cols-3">
+        <img src="assets/products/nic-menthol-02.jpg" alt="Menthol" />
+        <img src="assets/products/nic-coffee-02.jpg" alt="Coffee" />
+        <img src="assets/products/nic-watermelon-02.jpg" alt="Watermelon" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção principais produtos -->
+  <div class="page-inner-content">
+    <h3 class="section-title">Principais Produtos</h3>
+    <div class="subtitle-underline"></div>
+    <div class="cols cols-4">
+      <div class="product">
+        <img src="assets/products/nic-mango-2.png" alt="NYX Mango" />
+        <p class="product-name">NYX MANGO 9MG</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="product-price"><span>R$</span>30,00</p>
+        <button class="cta-button" (click)="adicionarCarrinho()">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="assets/products/nic-energy.png" alt="NYX Energy" />
+        <p class="product-name">NYX ENERGY 9MG</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="product-price"><span>R$</span>30,00</p>
+        <button class="cta-button" (click)="adicionarCarrinho()">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="assets/products/nic-menthol.png" alt="NYX Menthol" />
+        <p class="product-name">NYX MENTHOL 9MG</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="product-price"><span>R$</span>30,00</p>
+        <button class="cta-button" (click)="adicionarCarrinho()">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="assets/products/nic-melancia.png" alt="NYX Watermelon" />
+        <p class="product-name">NYX WATERMELON 9MG</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="product-price"><span>R$</span>30,00</p>
+        <button class="cta-button" (click)="adicionarCarrinho()">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção destaque exclusiva -->
+  <div class="gray-background">
+    <div class="header-inner-content">
+      <div class="header-bottom-side exclusive-container">
+        <div class="header-bottom-side-left">
+          <h2>NYX NIC POUCHES</h2>
+          <p>
+            Imagine sentir a explosão refrescante e doce da manga enquanto cuida da sua saúde
+            e dá um passo a mais rumo à liberdade do cigarro.
+          </p>
+          <button class="cta-button" (click)="adicionarCarrinho()">Adicionar ao Carrinho</button>
+        </div>
+        <div class="header-bottom-side-right">
+          <img src="assets/products/imagem-mango-03.png" alt="Mango" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrinho -->
+  <div class="cart-icon-container" style="position: relative;">
+    <img src="assets/images/cart.png" alt="Carrinho" id="cart-icon" />
+    <span class="cart-count" *ngIf="cartCount() > 0">{{ cartCount() }}</span>
+  </div>
+
+  <!-- Seção depoimentos -->
+  <div class="page-inner-content">
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"</p>
+        <p>Consegui parar de fumar depois de 10 anos! O sachê sabor manga é delicioso e me ajudou muito no processo.</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>Maria Antonela</p>
+      </div>
+      <div class="testimonial">
+        <p>"</p>
+        <p>Uso no trabalho e ninguém percebe, super discreto. O sabor é ótimo e dura bastante tempo.</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>Carlos Francisco</p>
+      </div>
+      <div class="testimonial">
+        <p>"</p>
+        <p>Finalmente encontrei algo que substitui o cigarro sem me deixar ansiosa. Recomendo demais!</p>
+        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>Fernanda K.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="gray-background">
+  <div class="page-inner-content footer-content">
+    <p>&copy; 2025 NYX Pouches — Todos os direitos reservados.</p>
+  </div>
+</footer>

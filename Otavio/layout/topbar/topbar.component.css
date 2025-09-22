@@ -1,0 +1,76 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(90deg, #0d47a1, #1976d2, #42a5f5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu li {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+}
+
+.navbar .menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Destaque para a rota ativa */
+.navbar .menu li a.active {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffeb3b; /* amarelo para destaque */
+  font-weight: bold;
+  border-bottom: 2px solid #ffeb3b;
+}
+
+/* Alinhar o botão Sair à direita */
+.navbar .menu li.right {
+  margin-left: auto;
+}
+
+/* ================== TEMA DARK (alternativo) ================== */
+.navbar.dark {
+  background: linear-gradient(90deg, #4a148c, #6a1b9a, #8e24aa);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.navbar.dark .menu li a.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ff9800; /* laranja no tema dark */
+  border-bottom: 2px solid #ff9800;
+}
