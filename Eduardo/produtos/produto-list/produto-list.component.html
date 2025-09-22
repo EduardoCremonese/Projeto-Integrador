@@ -1,0 +1,54 @@
+<h2 class="section-title">Produtos</h2>
+<div class="subtitle-underline"></div>
+
+<form [formGroup]="filtroForm" (ngSubmit)="buscar()" class="filtros">
+  <input type="text" placeholder="Nome" formControlName="nome">
+  <input type="number" placeholder="Preço mín." formControlName="min">
+  <input type="number" placeholder="Preço máx." formControlName="max">
+  <select formControlName="ativo">
+    <option value="">Ativo? (todos)</option>
+    <option value="true">Sim</option>
+    <option value="false">Não</option>
+  </select>
+  <button mat-raised-button type="submit">Filtrar</button>
+  <button mat-button type="button" (click)="filtroForm.reset(); buscar()">Limpar</button>
+  <button mat-flat-button color="primary" type="button" (click)="novo()">Novo</button>
+</form>
+
+<table mat-table [dataSource]="data" class="mat-elevation-z1">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>#</th>
+    <td mat-cell *matCellDef="let r">{{ r.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef>Nome</th>
+    <td mat-cell *matCellDef="let r">{{ r.nome }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="preco">
+    <th mat-header-cell *matHeaderCellDef>Preço</th>
+    <td mat-cell *matCellDef="let r">R$ {{ r.preco | number:'1.2-2' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="estoque">
+    <th mat-header-cell *matHeaderCellDef>Estoque</th>
+    <td mat-cell *matCellDef="let r">{{ r.estoque }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="ativo">
+    <th mat-header-cell *matHeaderCellDef>Ativo</th>
+    <td mat-cell *matCellDef="let r">{{ r.ativo ? 'Sim' : 'Não' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef>Ações</th>
+    <td mat-cell *matCellDef="let r">
+      <button mat-icon-button (click)="editar(r)"><mat-icon>edit</mat-icon></button>
+      <button mat-icon-button (click)="excluir(r)"><mat-icon>delete</mat-icon></button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayed"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayed"></tr>
+</table>
