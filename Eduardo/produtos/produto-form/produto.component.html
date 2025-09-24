@@ -1,0 +1,35 @@
+<main>
+  <div class="products-page"></div>
+  <div class="page-inner-content" style="padding:1rem 1rem;">
+
+    <h2 class="section-title">Todos os Produtos</h2>
+    <div class="subtitle-underline"></div>
+
+    <!-- Filtro -->
+    <div style="margin: 1rem 0;">
+      <input type="text" [(ngModel)]="filtroNome" placeholder="Buscar por nome..." />
+      <button class="cta-button" (click)="listar()">Filtrar</button>
+    </div>
+
+    <div class="cols cols-4" style="padding-top: 1rem;">
+  <div class="product" *ngFor="let p of produtos">
+    <!-- Usa a imagem do produto se existir, senão mostra o placeholder -->
+    <img [src]="p.imagemUrl || 'https://via.placeholder.com/150'" [alt]="p.nome" />
+
+    <p class="product-name">{{ p.nome }}</p>
+    <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+    <p class="product-price"><span>R$</span>{{ p.preco }}</p>
+
+    <button class="cta-button" (click)="adicionarCarrinho(p)">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</div>
+  </div>
+</main>
+
+<footer class="gray-background">
+  <div class="page-inner-content footer-content">
+    <p style="padding:1rem 0; color:#fff;">NYX POUCHES — Todos os direitos reservados</p>
+  </div>
+</footer>

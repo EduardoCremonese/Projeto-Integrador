@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h4>{{ isEditando ? 'Editar' : 'Novo' }} Produto</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="salvar()">
+        <div class="mb-3">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" [(ngModel)]="produto.nome" 
+                 name="nome" required maxlength="100">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Descrição</label>
+          <textarea class="form-control" [(ngModel)]="produto.descricao" 
+                    name="descricao" rows="3" required></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Preço</label>
+              <input type="number" class="form-control" [(ngModel)]="produto.preco" 
+                     name="preco" step="0.01" min="0" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Estoque</label>
+              <input type="number" class="form-control" [(ngModel)]="produto.estoque" 
+                     name="estoque" min="0" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary">
+            {{ isEditando ? 'Atualizar' : 'Salvar' }}
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="voltar()">Voltar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
